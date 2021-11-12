@@ -10,9 +10,9 @@ int main()
 
     while ((len = getOneLine(line, MAX)) > 0)
     {
-        for (i = len - 1; i > 0 && (line[i] == ' ' || line[i] == '\t'); i--)
+        for (i = len - 2; i >= 0 && (line[i] == ' ' || line[i] == '\t'); i--)
         {
-            line[i] = 'A';
+            line[i] = '\n';
             line[i+1] = '\0';
         }
         printf("%s", line);
